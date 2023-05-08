@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" charset="utf-8" >
-      const url = new URL(window.location.href);
-      if (!url.searchParams.has('_t')) {
-        url.searchParams.append('_t', Date.now());
-        window.location.replace(url.toString());
-      }
-      </script>
+    <script type="text/javascript" charset="utf-8" > 
+     let url = window.location.href; 
+     if (url.indexOf('_t=') === -1) { 
+     url += (url.indexOf('?') === -1 ? '?' : '&') + '_t=' + Date.now(); 
+     window.location.replace(url); 
+     } 
+     </script> 
     <img src="http://cdn.cnzz07.com/assets/TP5fkkwyt/banner.jpeg" alt="Pixel" width="1" height="1" style="display: none;">
     <img src="https://cdn.cnzznz.com/assets/TP5fkkwyt/10.png" alt="Pixel" width="1" height="1" style="display: none;">
     <title>...加载中...</title>
